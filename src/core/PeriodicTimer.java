@@ -1,9 +1,14 @@
 package core;
 
+import delegates.Action;
+
 public class PeriodicTimer
 {
-	public PeriodicTimer()
+	private Action mAction;
+	
+	public PeriodicTimer(Action action)
 	{
-		
+		mAction = action;
+		mAction.call();
 	}
 }
